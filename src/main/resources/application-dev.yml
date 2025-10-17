@@ -2,12 +2,12 @@ server:
   port: 8000
 spring:
   application:
-    name: academia-service
+    name: estoque-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/academiadb
-    username: postgres
-    password: 123456
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
